@@ -1,0 +1,89 @@
+@import "node_modules/ol/ol.css";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+#map {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100vh;
+  width: 100%;
+}
+.container h4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+.sidebar-container{
+  height: 100%;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: auto;
+}
+.tools-container{
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: calc(80% - 24px);
+  height: 40px;
+  z-index: 1;
+  display: flex;
+}
+
+.layer {
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 4px 12px;
+}
+.layer p {
+  margin-left: 12px;
+  cursor: pointer;
+}
+.layer input {
+    margin-left: 12px;
+}
+.modal {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  z-index: 1000;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.modal-content input {
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  margin: 10px 5px;
+}
+.visual{
+  margin-left: 12px;
+}
