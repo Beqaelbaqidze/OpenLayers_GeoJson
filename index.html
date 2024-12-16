@@ -5,16 +5,44 @@
     <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Using OpenLayers with Vite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include jsGrid CSS and JS -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"
+    ></script>
+
   </head>
   <body>
     <div class="container">
-      <div class="tools-container" ></div>
-      <div class="sidebar-container" id="root">
-        <h4>Layers</h4>
+      <div id="sidebar"></div>
+      <div id="map" ></div>
+      <div id="attributeGridContainer" style="display: none">
+        <button id="closeGridBtn" onclick="closeAttributeGrid()">Close</button>
+        <div id="attributeGrid"></div>
       </div>
-      <div id="map"></div>
     </div>
     
     <script type="module" src="./main.js"></script>
+    <script>
+       function closeAttributeGrid() {
+      const gridContainer = document.getElementById("attributeGridContainer");
+      if (gridContainer) {
+        gridContainer.style.display = "none";
+      }
+    } 
+    </script>
   </body>
 </html>
